@@ -1043,6 +1043,15 @@ scrolling="no" onmousedown="clicksoundeffect.play();"><button onclick="scrollToT
             document.documentElement.scrollTop = 0;
         }</script>
 <script>
+   function openIframe(domain) {
+  const iframe = document.createElement("iframe");
+  iframe.src = "https://" + domain;
+  iframe.id = "rusic-modal";
+  iframe.style = "position:fixed;z-index:999999;width:100%;height:94%;left:0;top:48px;border:0;overflow:hidden;border-radius:0;background:black;";
+  document.body.appendChild(iframe);
+} 
+</script>
+<script>
 function scrollToTop() {
       window.scrollTo(0, 0);
       document.body.style.overflow = "hidden";
